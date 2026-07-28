@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    form 태그
+        폼 태그 속성
+        action: form 요소의 값들이 가야할 곳(경로)
+        method: get(기본) or post
+
+        1) input
+           text : 한 줄짜리 text
+           radio : 하나만 선택 시(필수로 value 속성 필요)
+           checkbox: 여러개 선택 시(필수로 value 속성 필요)
+           submit: form 요소의 값들을 action에 적힌 곳으로 전송
+           button: 버튼 모양으로만 나옴 => 스크립트 필요
+
+           date
+           datetime-local
+           email
+           file
+           color
+           month
+           number
+           password
+           search
+           tel
+           time
+           url
+           week
+      -->
+    <!---->
+    <form action="table.html" method="get">
+      <div>
+        <!--label for="name">이름</label-->
+        <label for="">
+          이름
+          <input
+            type="text"
+            name="name"
+            id="name"
+            readonly
+            value="alex"
+            disabled
+            size="50"
+          />
+        </label>
+        <div>
+          <label>
+            주소
+            <input type="text" name="addr" id="addr" size="50" maxlength="4" />
+          </label>
+        </div>
+      </div>
+      <div>
+        <input type="radio" name="Fruits1" id="apple" value="사과" />
+        <label for="apple">사과</label>
+        <input type="radio" name="Fruits1" id="" value="포도" />
+        <label for="">포도</label>
+        <input type="radio" name="Fruits1" id="" value="키위" />
+        <label for="">키위</label>
+      </div>
+      <div>
+        <input type="checkbox" name="Fruits2" id="" value="사과" />
+        <label for="">사과</label>
+        <input type="checkbox" name="Fruits2" id="" value="포도" />
+        <label for="">포도</label>
+        <input type="checkbox" name="Fruits2" id="" value="키위" />
+        <label for="">키위</label>
+      </div>
+      <div>
+        <div>
+          <input type="date" name="" id="" min="2026-07-01" max="2026-07-06" />
+        </div>
+        <div>
+          로컬 타임
+          <input type="datetime-local" name="" id="" />
+        </div>
+        <div>
+          이메일
+          <input type="email" name="" id="" />
+        </div>
+        <div>
+          파일
+          <input type="file" name="" id="" multiple />
+        </div>
+        <div>
+          색깔
+          <input type="color" name="" id="" />
+        </div>
+        <div>
+          월
+          <input type="month" name="" id="" />
+        </div>
+        <div>
+          number
+          <input type="number" name="" id="" min="1" max="3" />
+        </div>
+        <div>
+          비밀번호
+          <input type="password" name="" id="" />
+        </div>
+        <div>
+          서치
+          <input type="search" name="" id="" />
+        </div>
+        <div>
+          tel
+          <input type="tel" name="" id="" />
+        </div>
+        <div>
+          time
+          <input type="time" name="" id="" />
+        </div>
+        <div>
+          url
+          <input type="url" name="url" id="" />
+        </div>
+        <div>
+          weeks
+          <input type="week" name="" id="" />
+        </div>
+      </div>
+      <div>
+        <select name="cars" id="cars">
+          <option value="">-----</option>
+          <option value="volvo">volvo</option>
+          <option value="saab">saap</option>
+          <option value="fiat">fiat</option>
+          <option value="audi">audi</option>
+        </select>
+        <div>
+          <textarea name="msg" id="" cols="30" rows="10">playing</textarea>
+        </div>
+      </div>
+      <div>
+        <input type="submit" value="전송" />
+        <input type="reset" value="초기화" />
+        <input type="button" value="보내기" />
+      </div>
+    </form>
+  </body>
+</html>
