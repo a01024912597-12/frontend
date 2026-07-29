@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상품 주문</title>
+  
+  </head>
+  <body>
+    <h1>  운동화 주문하기 </h1>
+    <form action="">
+        <fieldset form="">
+          <legend>사이즈 선택</legend>
+          <label><input type="radio" name="size" id="250mm" value="250mm" checked/>250mm</label>
+          <label><input type="radio" name="size" id="260mm" value="260mm" />260mm</label>
+          <label><input type="radio" name="size" id="270mm" value="270mm" />270mm</label>
+
+        </fieldset>
+        <fieldset form="">
+          <legend>색상 선택</legend>
+          <label>색상 : </label>
+          <select name="color" id="color">
+            <option value="black">블랙</option>
+            <option value="black">레드</option>
+            <option value="black">블루</option>
+          </select>
+
+        </fieldset>
+
+        <fieldset form="">
+
+          <legend>배송지</legend>
+            <label for="city">도시 : </label>
+            <input type="city" >
+          </select>
+        </fieldset>
+
+        <fieldset form="">
+          <legend>요청사항</legend>
+        <textarea name="" id="" cols="30" rows="10" placeholder="배송시 요청사항을 입력하세요"></textarea>
+        </fieldset>
+        <button type="submit">주문하기</button>
+        <button type="reset">초기화</button>
+
+      
+    </form>
+  </body>
+</html>
