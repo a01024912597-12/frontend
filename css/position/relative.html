@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- fixed: 
+     position
+
+     fixed : 브라우저(뷰포트)를 기준으로 배치
+     apsolute: 위치 상 부모 요소를 기준으로 배치
+     - 부모 요소를 지정하지 않으면 뷰포트 기준
+     relative: 요소 자신을 기준으로 배치
+
+      -->
+    <style>
+      .box {
+        border: 1px solid black;
+        padding: 10px;
+        position: absolute;
+        /* left: 100px;
+        top: 100px; */
+      }
+      .a {
+        background-color: blue;
+        left: 50px;
+        top: 50px;
+      }
+      .b {
+        background-color: red;
+        left: 50px;
+        top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box a">
+      <img src="https://placehold.co/100" alt="" />
+    </div>
+    <div class="box b">
+      <img src="https://placehold.co/100" alt="" />
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore dicta esse at sed numquam odit placeat eum
+      nemo doloremque eaque error ad quas nihil, similique voluptates veniam. Officia minima aliquid omnis? Nobis
+      deleniti, veritatis quasi minima perferendis quisquam. Quidem sed tempore optio quisquam error expedita vero
+      explicabo hic modi?
+    </p>
+  </body>
+</html>

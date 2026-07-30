@@ -1,0 +1,14 @@
+table {
+  border: 2px solid black;
+  width: 600px;
+  margin-bottom: 50px;
+  border-collapse: collapse;
+  caption-side: top;
+}
+
+tr,
+td {
+  border: 2px solid black;
+  padding: 0.4en 0.8em;
+  width: 600px;
+}
