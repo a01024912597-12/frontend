@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 
+        float 속성은 위로 뜨는 상태
+        float 속성 지정하면 지정한 높이나 너비를 반영해 블록 요소처럼 동작
+        clear : 방향; clear:left;, clear:right, clear:both; => float 속성 해제
+        문제점 : 부모의 크기 문제가 생길 수 있음
+    -->
+    <style>
+      .red,
+      .blue,
+      .green {
+        margin: 0.5em;
+        height: 160px;
+        text-align: center;
+        border-radius: 4px;
+        color: white;
+      }
+      .blue {
+        width: 160px;
+        background-color: slateblue;
+        float: left;
+      }
+      .red {
+        width: 240px;
+        height: 240px;
+        background-color: tomato;
+        float: right;
+      }
+      .green {
+        width: 160px;
+        background-color: olivedrab;
+        float: right;
+      }
+      .gray {
+        padding: 0.8em;
+        background-color: #eee;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="result">
+      <h1>float와 clear 속성</h1>
+      <div class="blue">파랑 div</div>
+      <div class="red">빨강 div</div>
+      <span class="green">초록 span</span>
+      <div class="gray">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia repellat nihil nisi asperiores laborum, earum
+        voluptatum, natus doloribus molestias quibusdam odio corporis temporibus provident quo minima? Tenetur nesciunt
+        facere rem.
+      </div>
+    </div>
+  </body>
+</html>
