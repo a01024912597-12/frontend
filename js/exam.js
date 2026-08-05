@@ -2,17 +2,17 @@
 function sum(x, y) {
   return x + y;
 }
-result = sum(1, 2);
-console.log(result);
+console.log(sum(1, 2));
 
 // 2. 함수 안에서 1~10까지 더한 결과를 출력하는 함수 작성
-
-let hap = 0;
-for (i = 1; i < 11; i++) {
-  hap += i;
+function sum2() {
+  let hap = 0;
+  for (i = 1; i < 11; i++) {
+    hap += i;
+  }
+  console.log(hap);
 }
-console.log(hap);
-
+sum2();
 // 3. multiple(num) 정의 - num이 3의 배수라면 "박수"출력 / "통과"
 
 function multiple(num) {
@@ -28,7 +28,7 @@ multiple(4);
 function multiple2(num) {
   if (num % 3 == 0) {
     if (num % 9 == 0) {
-      console.log("박수박수");
+      console.log("박수 * 2");
     } else {
       console.log("박수");
     }
