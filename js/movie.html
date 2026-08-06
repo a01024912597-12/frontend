@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="date">날짜 입력하기</label>
+        <input type="text" name="date" id="date" />
+        <button type="submit">입력</button>
+      </div>
+      <div>
+        <script src="movie.js">
+          async function load() {
+            const response = await fetch("http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=c55aec3c79cb8881621fa462fc5b24d3&targetDt=20260805");
+            const data = await response.json();
+            console.log(data);
+
+            let result = `<ul>`;
+            data.forEach((item) => {
+              result += `<li>rank : ${data.rank}</li>`;
+              result += `<li>movieNm : ${data.movieNm}</li>`;
+            });
+            result += `<ul>`;
+            document.querySelector("div").innerHTML = result;
+          }
+          load();
+        </script>
+      </div>
+    </form>
+  </body>
+</html>
