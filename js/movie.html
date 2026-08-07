@@ -4,32 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      * {
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 80%;
+        margin: 100px;
+      }
+      table {
+        border-collapse: collapse;
+        margin-top: 30px;
+        display: none;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 0.4em, 0.8em;
+      }
+      input[type="data"] {
+        appearance: none;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 8px 12px;
+        color: #333;
+        font-family: inherit;
+      }
+    </style>
   </head>
   <body>
-    <form action="">
+    <div class="container">
+      <h2>일별 박스 오피스</h2>
       <div>
-        <label for="date">날짜 입력하기</label>
-        <input type="text" name="date" id="date" />
-        <button type="submit">입력</button>
+        <input type="date" name="date" id="date" />
+        <span>* 날짜 선택 시 해당 일의 1~10위 박스오피스 확인가능합니다.</span>
       </div>
-      <div>
-        <script src="movie.js">
-          async function load() {
-            const response = await fetch("http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=c55aec3c79cb8881621fa462fc5b24d3&targetDt=20260805");
-            const data = await response.json();
-            console.log(data);
-
-            let result = `<ul>`;
-            data.forEach((item) => {
-              result += `<li>rank : ${data.rank}</li>`;
-              result += `<li>movieNm : ${data.movieNm}</li>`;
-            });
-            result += `<ul>`;
-            document.querySelector("div").innerHTML = result;
-          }
-          load();
-        </script>
-      </div>
-    </form>
+      <table>
+        <thead>
+          <tr>
+            <td>순위</td>
+            <td>전일대비</td>
+            <td>영화명</td>
+            <td>개봉일</td>
+            <td>당일관객수</td>
+            <td>누적관객수</td>
+            <td>누적매출액</td>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div id="detail"></div>
+    </div>
+    <script src="movie.js"></script>
   </body>
 </html>
